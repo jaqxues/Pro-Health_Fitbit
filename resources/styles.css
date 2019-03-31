@@ -1,0 +1,63 @@
+.background {
+    viewport-fill: black;
+}
+
+#screen1 {
+    display: none;
+}
+
+#clock-txt {
+    font-size: 80;
+    font-family: Colfax-Regular;
+    text-length: 32;
+    text-anchor: middle;
+    x: 50%;
+    y: 60%;
+    fill: white;
+}
+
+#discount-indicator {
+    font-size: 20;
+    font-family: Colfax-Regular;
+    fill: #00aa00;
+    x: 95%;
+    y: 20%;
+    text-anchor: end;
+}
+
+.perm-text {
+    font-family: Colfax-Regular;
+    text-length: 64;
+    fill: white;
+    width: 80%;
+    x: 10%;
+    text-anchor: middle;
+}
+
+.app-name {
+    text-length: 32;
+    font-family: Colfax-Regular;
+    fill: #999999;
+    text-anchor: end;
+}
+
+#counters-container {
+    y: 80%;
+    height: 20%;
+    pointer-events: visible;
+}
+
+.counters text {
+    text-length: 32;
+    fill: #0164A7;
+}
+
+.counter-prim {
+    font-size: 24;
+    y: 40%;
+}
+
+.counter-sec {
+    font-size: 16;
+    y: 70%
+}
