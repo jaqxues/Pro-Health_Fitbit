@@ -118,4 +118,10 @@ function loadScreen2() {
         }
         updateProgress();
     });
+
+    userActivity.goals.addEventListener("reachgoal", (goals, event) => {
+
+        // TODO Implement
+        console.log("Reached Goal " + event);
+    });
 }
