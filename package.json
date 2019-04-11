@@ -11,7 +11,7 @@
     "appUUID": "9ed17756-a7bb-42d4-b1aa-1ae15b9a8bdc",
     "appType": "app",
     "appDisplayName": "Pro-Health",
-    "iconFile": "resources/icon.png",
+    "iconFile": "resources/icons/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [
       "access_activity"

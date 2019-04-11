@@ -18,10 +18,8 @@ if (!me.permissions.granted("access_activity")) {
 function loadScreen2() {
     const refreshRate = 3000;
 
-    const discountIndicator = document.getElementById("discount-indicator");
     const primaryArc = document.getElementById("primary-arc");
     const clockElement = document.getElementById("clock-txt");
-    const monthScoreEl = document.getElementById("month-score");
 
     const stepProgress = document.getElementById("steps-progress");
     const activeMinProgress = document.getElementById("activemin-progress");
@@ -52,16 +50,6 @@ function loadScreen2() {
         let mins = util.zeroPad(today.getMinutes());
         clockElement.text = `${hours}:${mins}`;
     };
-
-    discountIndicator.onclick = animateAll;
-    clockElement.onclick = animateAll;
-    monthScoreEl.onclick = animateAll;
-
-    function animateAll() {
-        clockElement.animate("hallo");
-        discountIndicator.animate("hallo");
-        monthScoreEl.animate("hallo");
-    }
 
     updateProgress();
     let updater = setInterval(updateProgress, refreshRate);

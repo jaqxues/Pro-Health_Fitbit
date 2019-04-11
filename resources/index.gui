@@ -1,13 +1,18 @@
 <svg class="background">
     <svg id="screen1">
-        <image x="0%" y="5%" height="80" width="80" href="../resources/icon.png"></image>
-        <text x="60%" y="10%" class="app-name" font-size="18" fill="white">Pro-Health</text>
+        <image y="5%" height="80" width="80" href="../resources/icons/icon.png"></image>
+        <text x="95%" y="10%" class="app-name" font-size="18">Pro-Health</text>
         <textarea y="20%" font-size="30" class="perm-text">Permission denied</textarea>
         <textarea y="60%" font-size="18" class="perm-text">This Application needs the "User Activity"-permission. Please grant it in the Pro-Health Companion's Settings.</textarea>
     </svg>
     <svg id="screen2">
-        <image x="0%" y="5%" height="80" width="80" href="../resources/icon.png"></image>
-        <image x="30%" y="5%" height="30" width="80" href="../resources/ic-lts_80.png"></image>
+
+
+        <!-- TODO rewrite with <use> -->
+
+
+        <image x="0%" y="5%" height="80" width="80" href="../resources/icons/icon.png"></image>
+        <image x="30%" y="5%" height="30" width="80" href="../resources/icons/ic-lts_80.png"></image>
         <text x="95%" y="10%" font-size="20" class="app-name">Pro-Health</text>
         <text id="discount-indicator">-1.34%</text>
         <text id="clock-txt"></text>
@@ -28,12 +33,12 @@
                         <!-- Steps Progress: Bottom Left -->
                         <text class="counter-prim" id="steps-progress" x="20%"></text>
                         <text class="counter-sec" id="steps-count" x="20%"></text>
-                        <image x="10%" y="25%" height="24" width="24" href="../resources/ic-steps_24.png"></image>
+                        <image x="10%" y="25%" height="24" width="24" href="../resources/icons/ic-steps_24.png"></image>
 
                         <!-- ActiveMinutes Progress: Bottom Right -->
                         <text class="counter-prim" id="activemin-progress" x="70%"></text>
                         <text class="counter-sec" id="activemin-count" x="70%"></text>
-                        <image x="60%" y="25%" height="24" width="24" href="../resources/ic-timer_24.png"></image>
+                        <image x="60%" y="25%" height="24" width="24" href="../resources/icons/ic-timer_24.png"></image>
                     </svg>
                 </use>
                 <!-- View 2 of the PanoramaView -->
@@ -42,12 +47,12 @@
                         <!-- Distance Progress: Bottom Left -->
                         <text class="counter-prim" id="distance-progress" x="20%"></text>
                         <text class="counter-sec" id="distance-count" x="20%"></text>
-                        <image x="10%" y="30%" height="24" width="24" href="../resources/ic-street_24.png"></image>
+                        <image x="10%" y="30%" height="24" width="24" href="../resources/icons/ic-street_24.png"></image>
 
                         <!-- ElevationGain Progress: Bottom Right -->
                         <text class="counter-prim" id="elevationgain-progress" x="70%"></text>
                         <text class="counter-sec" id="elevationgain-count" x="70%"></text>
-                        <image x="60%" y="30%" height="24" width="24" href="../resources/ic-stairs_24.png"></image>
+                        <image x="60%" y="30%" height="24" width="24" href="../resources/icons/ic-stairs_24.png"></image>
                     </svg>
                 </use>
 
