@@ -4,6 +4,7 @@ import { preferences } from "user-settings";
 import { me } from "appbit";
 import * as util from "../common/utils";
 import userActivity from "user-activity";
+import { HeartRateSensor } from "heart-rate";
 
 if (!me.permissions.granted("access_activity")) {
     document.getElementById("screen1").style.display = "inline";
@@ -17,8 +18,6 @@ if (!me.permissions.granted("access_activity")) {
  */
 function loadScreen2() {
     const refreshRate = 3000;
-
-    const primaryArc = document.getElementById("primary-arc");
     const clockElement = document.getElementById("clock-txt");
 
     const stepProgress = document.getElementById("steps-progress");
@@ -59,16 +58,8 @@ function loadScreen2() {
      * Includes Total Health Score, The "Steps" as well as "Active Minutes" progress indicators
      */
     function updateProgress() {
-        primaryArc.sweepAngle = util.calcHealthScore() * 360;
 
         if (showGoal) {
-            // stepsCount.text = userActivity.goals.adjusted["steps"] || 0;
-            // activeMinCount.text = util.getActiveMinText(
-            //     userActivity.goals.adjusted["activeMinutes"] || 0);
-            // distanceCount.text = util.getDistanceText(
-            //     userActivity.goals.adjusted["distance"] || 0);
-            // elevationGainCount.text = util.getElevationGainText(
-            //     userActivity.goals.adjusted["elevationGain"] || 0);
             stepsCount.text = userActivity.goals.steps || 0;
             activeMinCount.text = util.getActiveMinText(
                 userActivity.goals.activeMinutes || 0);
@@ -100,7 +91,7 @@ function loadScreen2() {
 
     document.getElementById("counters-container").onclick = ((ev) => {
         showGoal = !showGoal;
-        let newColor = showGoal ? "#777777" : "#0164A7";
+        let newColor = showGoal ? "#777777" : "#a75521";
 
         document.getElementsByClassName("counter-prim")
             .concat(document.getElementsByClassName("counter-sec"))
@@ -124,4 +115,16 @@ function loadScreen2() {
         // TODO Implement
         console.log("Reached Goal " + event);
     });
+}
+
+console.log("EXECUTED");
+if (HeartRateSensor) {
+    const hrm = new HeartRateSensor();
+    console.log("EXECUTED1");
+    hrm.addEventListener("reading", () => {
+        document.getElementById("heart-rate").innerText = hrm.heartRate + "bpm";
+        console.log("EXECUTED2")
+    });
+    hrm.start();
+    document.getElementById("heart-rate").innerText = hrm.heartRate + "bpm";
 }

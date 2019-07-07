@@ -9,15 +9,6 @@ export function zeroPad(i) {
 }
 
 /**
- * Calculates the total health score of the user.
- *
- * @returns {number}
- */
-export function calcHealthScore() {
-    return (getStepProgress() + getActiveMinProgress() + getDistanceProgress() + getElevationGainProgress()) / 4;
-}
-
-/**
  * Make sure to use toFixed(0) to display this information to the user
  *
  * @returns {number} The Step Progress (Steps / Goal) in a number from 0 to 1
